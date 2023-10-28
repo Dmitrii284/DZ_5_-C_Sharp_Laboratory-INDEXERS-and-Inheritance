@@ -102,32 +102,32 @@ namespace DZ_5__C_Sharp_Laboratory_INDEXERS_and_Inheritance
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Task_1_Hello, World!");
-            //Console.WriteLine("Введите нижний индекс диапазона:");
-            //int lowerIndex = int.Parse(Console.ReadLine());
+            Console.WriteLine("Task_1_Hello, World!");
+            Console.WriteLine("Введите нижний индекс диапазона:");
+            int lowerIndex = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine("Введите верхний индекс диапазона:");
-            //int upperIndex = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите верхний индекс диапазона:");
+            int upperIndex = int.Parse(Console.ReadLine());
 
-            //RangeOfArray rangeArray = new RangeOfArray(lowerIndex, upperIndex);
+            RangeOfArray rangeArray = new RangeOfArray(lowerIndex, upperIndex);
 
-            //rangeArray.FillRandom();
-            //rangeArray.PrintArray();
+            rangeArray.FillRandom();
+            rangeArray.PrintArray();
 
-            //Console.WriteLine("Хотите добавить элемент в массив? (Y/N)");
-            //string answer = Console.ReadLine();
+            Console.WriteLine("Хотите добавить элемент в массив? (Y/N)");
+            string answer = Console.ReadLine();
 
-            //while (answer.ToLower() == "y")
-            //{
-            //    Console.WriteLine("Введите значение элемента:");
-            //    int value = int.Parse(Console.ReadLine());
+            while (answer.ToLower() == "y")
+            {
+                Console.WriteLine("Введите значение элемента:");
+                int value = int.Parse(Console.ReadLine());
 
-            //    rangeArray.AddElement(value);
-            //    rangeArray.PrintArray();
+                rangeArray.AddElement(value);
+                rangeArray.PrintArray();
 
-            //    Console.WriteLine("Хотите добавить еще элемент в массив? (Y/N)");
-            //    answer = Console.ReadLine();
-
+                Console.WriteLine("Хотите добавить еще элемент в массив? (Y/N)");
+                answer = Console.ReadLine();
+            }
                 // Task_2
                 Console.WriteLine("\n\nЗадача 2: «Резервная копия»");
                 double dataToCopy = 565; // размер данных для копирования в Гб
@@ -152,11 +152,11 @@ namespace DZ_5__C_Sharp_Laboratory_INDEXERS_and_Inheritance
                 };
                 double totalMemorySize = 0;
             BackupManager backupManager = new BackupManager(devices);
-            foreach (var device in devices)
-            {
-                totalMemorySize += device.GetMemorySize();
-                device.Print();
-            }
+                foreach (var device in devices)
+                {
+                    totalMemorySize += device.GetMemorySize();
+                    device.Print();
+                }
           
             totalMemorySize = backupManager.CalculateMemory();
                 Console.WriteLine($"Общий объем памяти всех устройств: {totalMemorySize} Гб");
